@@ -32,7 +32,7 @@ import { AiFillHome, AiOutlineInbox, AiOutlineMenu } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Logo from "../Navbar/Logo"
-
+import Balance from '../Balance/Balance';
 
 const Header = () => {
   const { activate, chainId } = useWeb3React<Web3Provider>();
@@ -372,6 +372,17 @@ const Header = () => {
             </Flex>
             <Flex justify="flex-end" align="center" color="gray.400">
               <HStack spacing="5" display={{ base: "none", md: "flex" }}>
+              <Balance/>
+              <Button
+                  colorScheme="brand"
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    onClick();
+                  }}
+                >
+                  Wallet Conncet
+                </Button>
                 <Button colorScheme="brand" variant="ghost" size="sm">
                   Sign in
                 </Button>
