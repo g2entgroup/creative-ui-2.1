@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from '@ethersproject/providers'
 import { injectedConnector } from "../../../utils/injectedConnector";
-import Image from "next/image";
+// import Image from "next/image";
 import {
   chakra,
   HStack,
@@ -31,6 +31,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { AiFillHome, AiOutlineInbox, AiOutlineMenu } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
+import Logo from "../Navbar/Logo"
 
 
 const Header = () => {
@@ -326,13 +327,7 @@ const Header = () => {
             <Flex align="flex-start">
               <Link href="/">
                 <HStack>
-                   <Image
-                      objectFit="cover"
-                      src="/g2.png"
-                      alt="Creative logo"
-                      width={40}
-                      height={40}
-                    />
+                  <Logo />
                     <Heading color={useColorModeValue("gray.500", "white")} as="h1" size="lg"> Creative</Heading>
                 </HStack>
               </Link>

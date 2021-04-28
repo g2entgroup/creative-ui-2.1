@@ -20,7 +20,7 @@ export default function CreativeCard() {
   };
 
   return (
-    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden">
+    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" align="center">
       <ReactPlayer 
         url={property.videoUrl}
         playing={true}
@@ -29,7 +29,7 @@ export default function CreativeCard() {
 
       <Box p="6">
         <Box d="flex" alignItems="baseline">
-          <Badge rounded="full" px="2" variantColor="pink">
+          <Badge rounded="full" px="2" colorScheme="pink">
             New
           </Badge>
           <Box
