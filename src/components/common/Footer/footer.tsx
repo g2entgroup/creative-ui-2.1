@@ -21,9 +21,9 @@ const Footer = () => {
       {/* logo  */}
       <Box textAlign="center" mb="3rem">
         <Image
-          src="/g2.png"
+          src="/Creative_logo.png"
           alt="Creative logo"
-          width={80}
+          width={90}
           height={80}
         />
         <Heading fontSize="2rem">Creative</Heading>
