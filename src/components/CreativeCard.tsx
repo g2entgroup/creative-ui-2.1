@@ -54,14 +54,15 @@ export default function CreativeCard() {
         <Box
           mt="1"
           fontWeight="semibold"
-          as="h4"
+          as="h2"
           lineHeight="tight"
           isTruncated
+          color="white"
         >
           {property.title}
         </Box>
 
-        <Box>
+        <Box color="white">
           {property.formattedPrice}
           <Box as="span" 
             bgGradient="linear(to-l, #7928CA, #e50168)"
