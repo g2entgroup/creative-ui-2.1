@@ -20,7 +20,7 @@ export default function CreativeCard() {
   };
 
   return (
-    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" align="center">
+    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" align="center" height="511px" width="full">
       <ReactPlayer 
         url={property.videoUrl}
         playing={true}
@@ -62,7 +62,7 @@ export default function CreativeCard() {
             fontSize="lg"
             fontWeight="extrabold" 
           >
-             / Weekly Prize
+            &nbsp;/ Weekly Prize
           </Box>
         </Box>
 
@@ -83,5 +83,3 @@ export default function CreativeCard() {
     </Box>
   );
 }
-
-// export default CreativeCard;
