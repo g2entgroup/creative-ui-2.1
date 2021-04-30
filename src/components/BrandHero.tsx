@@ -66,7 +66,7 @@ const BrandHero = () => {
                 fontSize={{ sm: "lg", md: "xl" }}
                 maxW={{ sm: "xl" }}
                 mx={{ sm: "auto", lg: 0 }}
-                color="gray.500"
+                color="gray.50"
               >
                  We take the very best creators and brands to create valuable commercial NFTs that both earn royalties and fans will love.
               </chakra.p>

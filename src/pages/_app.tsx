@@ -38,7 +38,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
               py="3"
               px={{ base: '3', md: '6', lg: '8' }}
               color="white"
-              bgGradient="linear(to-l, #FFCC80, #EC407A)"
+              bgGradient="linear(to-l, #FFCC80, #D32F2F, #EC407A)"
             >
               <HStack spacing="3">
                 <Icon as={BellIcon} fontSize="2xl" h="10" />
