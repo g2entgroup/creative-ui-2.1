@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Badge, useToken, Image } from "@chakra-ui/react";
+import { Box, Badge, useToken } from "@chakra-ui/react";
 import Icon from "@chakra-ui/icon";
 import ReactPlayer from 'react-player/lazy';
 
