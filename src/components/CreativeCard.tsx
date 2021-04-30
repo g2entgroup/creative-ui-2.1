@@ -1,9 +1,8 @@
 import React from "react";
 
-import { Box, Badge, Image } from "@chakra-ui/react";
+import { Box, Badge, useToken, Image } from "@chakra-ui/react";
 import Icon from "@chakra-ui/icon";
 import ReactPlayer from 'react-player/lazy';
-
 
 const StarIcon = ({ color }) => <Icon name="star" color={color} />
 
@@ -19,8 +18,16 @@ export default function CreativeCard() {
     rating: 4
   };
 
+  const [brand400, brand200] = useToken(
+    // the key within the theme, in this case `theme.colors`
+    "colors",
+    // the subkey(s), resolving to `theme.colors.red.100`
+    ["brand.400", "brand.200"],
+    // a single fallback or fallback array matching the length of the previous arg
+  )
+
   return (
-    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" align="center" height="511px" width="full">
+    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" align="center" height="511px" width="full" boxShadow={`inset 0 4px 0 ${brand400}, 0 0 8px ${brand200}`}>
       <ReactPlayer 
         url={property.videoUrl}
         playing={true}

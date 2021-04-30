@@ -16,7 +16,7 @@ export default function Home() {
       <BrandHero />
       <Main>
         <Heading as="h2" size="lg" color="white" my={4}>Active Brand Campaigns</Heading>
-        <SimpleGrid columns={[1, 4]} spacing="40px">
+        <SimpleGrid columns={[1, 4]} spacing="2rem">
           <CreativeCard />
           <CreativeCard />
           <CreativeCard />
