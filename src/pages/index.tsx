@@ -1,5 +1,5 @@
 // import Head from "next/head";
-import { Heading, SimpleGrid, Box, Text } from "@chakra-ui/react";
+import { Heading, SimpleGrid, Box, Text, OrderedList, ListItem } from "@chakra-ui/react";
 // import { Container } from '../components/common/container';
 import CreativeCard from '../components/CreativeCard';
 import BrandHero from '../components/BrandHero';
@@ -22,39 +22,40 @@ export default function Home() {
       <Main>
         <Heading as="h2" size="lg" color="white" my={4}>Top Creatives</Heading>
         <SimpleGrid columns={ 5 } spacing="2rem">
-          
           <Box height="80px">
-            <Text color="whiteAlpha.700">1.</Text>
-            <Text color="whiteAlpha.700">2.</Text>
-            <Text color="whiteAlpha.700">3.</Text>
+            <OrderedList>
+            <ListItem color="whiteAlpha.700"></ListItem>
+            <ListItem color="whiteAlpha.700"></ListItem>
+            <ListItem color="whiteAlpha.700"></ListItem>
+            </OrderedList>
           </Box>
           <Box height="80px">
-          <ol>
-            <Text color="whiteAlpha.700">4.</Text>
-            <Text color="whiteAlpha.700">5.</Text>
-            <Text color="whiteAlpha.700">6.</Text>
-          </ol>
+          <OrderedList>
+            <ListItem color="whiteAlpha.700" value="4"></ListItem>
+            <ListItem color="whiteAlpha.700" value="5"></ListItem>
+            <ListItem color="whiteAlpha.700" value="6"></ListItem>
+          </OrderedList>
           </Box>
           <Box height="80px">
-          <ol>
-            <Text color="whiteAlpha.700">7.</Text>
-            <Text color="whiteAlpha.700">8.</Text>
-            <Text color="whiteAlpha.700">9.</Text>
-          </ol>
+          <OrderedList>
+            <ListItem color="whiteAlpha.700" value="7"></ListItem>
+            <ListItem color="whiteAlpha.700" value="8"></ListItem>
+            <ListItem color="whiteAlpha.700" value="9"></ListItem>
+          </OrderedList>
           </Box>
           <Box height="80px">
-          <ol>
-            <Text color="whiteAlpha.700">10.</Text>
-            <Text color="whiteAlpha.700">11.</Text>
-            <Text color="whiteAlpha.700">12.</Text>
-          </ol>
+          <OrderedList>
+            <ListItem color="whiteAlpha.700" value="10"></ListItem>
+            <ListItem color="whiteAlpha.700" value="11"></ListItem>
+            <ListItem color="whiteAlpha.700" value="12"></ListItem>
+          </OrderedList>
           </Box>
           <Box height="80px">
-          <ol>
-            <Text color="whiteAlpha.700">13.</Text>
-            <Text color="whiteAlpha.700">14.</Text>
-            <Text color="whiteAlpha.700">15.</Text>
-          </ol>
+          <OrderedList>
+            <ListItem color="whiteAlpha.700" value="12"></ListItem>
+            <ListItem color="whiteAlpha.700" value="13"></ListItem>
+            <ListItem color="whiteAlpha.700" value="14"></ListItem>
+          </OrderedList>
           </Box>
         </SimpleGrid>
       </Main>
