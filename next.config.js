@@ -5,10 +5,6 @@ module.exports = {
         '/': { page: '/' }
       };
     },
-    images: {
-      loader: "imgix",
-      path: "",
-    },
     future: {
       webpack5: true,
     },

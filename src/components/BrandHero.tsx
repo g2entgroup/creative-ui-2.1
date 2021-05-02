@@ -1,5 +1,6 @@
 import React from "react";
-import { chakra, Box, useColorModeValue, Icon, Image } from "@chakra-ui/react";
+import { chakra, Box, useColorModeValue, Icon } from "@chakra-ui/react";
+import Image from "next/image";
 
 const BrandHero = () => {
   const bg = useColorModeValue("white", "gray.800");
@@ -128,11 +129,9 @@ const BrandHero = () => {
         w={{ lg: "50%" }}
       >
         <Image
-          h={[56, 72, 96, "full"]}
-          w="full"
-          fit="cover"
+          layout="fill"
           src="/brands.jpg"
-          alt=""
+          alt="brand image"
           loading="lazy"
         />
       </Box>
