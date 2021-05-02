@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Image } from '@chakra-ui/react';
+//import { Image } from '@chakra-ui/react';
+import Image from 'next/image';
 
 export default class Logo extends Component {
     render() {
         return (
             <Image 
-                src="/Creative_logo.png" 
-                align="center"
-                boxSize="40px"
-                objectFit="cover"
+                src="/Creative_logo.png"
                 alt="Creative Logo"
-                w="full" 
+                width={50}
+                height={40} 
             />
         )
     }
