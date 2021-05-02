@@ -1,17 +1,16 @@
 import React from "react";
 import {
   Grid,
-  GridItem,
   Flex,
   Box,
   Heading,
   Text,
   Input,
 } from "@chakra-ui/react";
-import Header from "../Navbar/header";
+//import Header from "../Navbar/header";
 import { AiOutlineMail } from "react-icons/ai";
-import { GoLocation } from "react-icons/go";
-import { FiFacebook, FiLinkedin, FiTwitter, FiInstagram } from "react-icons/fi";
+//import { GoLocation } from "react-icons/go";
+import { FiTwitter, FiInstagram } from "react-icons/fi";
 import { SiDiscord } from "react-icons/si";
 import Image from "next/image";
 
@@ -46,7 +45,7 @@ const Footer = () => {
             w="50px"
             background="linear-gradient(to right, rgba(22, 29, 47, 0),#e50168,rgba(22,29,47,0));"
           />
-          <Text>
+          <Text is="custom">
           A creative blockchain platform for independent creators, fans, and brands to exchange services directly and earn incentives through DeFi.
           </Text>
         </Box>
@@ -61,7 +60,7 @@ const Footer = () => {
             w="50px"
             background="linear-gradient(to right, rgba(22, 29, 47, 0),#e50168,rgba(22,29,47,0));"
           />
-          <Text>
+          <Text >
             Have a seat at the table and join our governance DAO, where our creative community helps decide the future of the Creative platform.
           </Text>
           <Box

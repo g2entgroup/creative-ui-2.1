@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
 //import { Stack, Box, Grid, Heading, Spacer, Link, Container } from "@chakra-ui/react";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from '@ethersproject/providers'
@@ -33,6 +33,7 @@ import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Logo from "../Navbar/Logo"
 import Balance from '../Balance/Balance';
+import SignIn from '../Modal/SignIn';
 
 const Header = () => {
   const { activate, chainId } = useWeb3React<Web3Provider>();
@@ -42,12 +43,15 @@ const Header = () => {
     activate(injectedConnector);
     console.log(chainId);
   };
+
+  const [showPass, setShowPass] = useState(false);
+
   const { toggleColorMode: toggleMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
   const bg = useColorModeValue("white", "gray.800");
-  const ref = React.useRef();
-  const [y, setY] = React.useState(0);
+  const ref = useRef(null);
+  const [y, setY] = useState(0);
   const { height = 0 } = ref.current ? ref.current.getBoundingClientRect() : {};
 
   const { scrollY } = useViewportScroll();
@@ -380,7 +384,7 @@ const Header = () => {
                     onClick();
                   }}
                 >
-                  Wallet Conncet
+                  Wallet Connect
                 </Button>
                 <Button colorScheme="brand" variant="ghost" size="sm">
                   Sign in
