@@ -5,6 +5,7 @@ import CreativeCard from '../components/CreativeCard';
 import BrandHero from '../components/BrandHero';
 import { Content } from "../components/common/Content/Content";
 import { Main } from "../components/common/Main/Main";
+import LiveCampaigns from "../components/LiveCampaigns";
 
 export default function Home() {
   return (
@@ -57,6 +58,15 @@ export default function Home() {
             <ListItem color="whiteAlpha.700" value="14"></ListItem>
           </OrderedList>
           </Box>
+        </SimpleGrid>
+      </Main>
+      <Main>
+        <Heading as="h2" size="lg" color="white" my={4}>Live Brand Campaigns</Heading>
+        <SimpleGrid columns={[1, 4]} spacing="2rem">
+          <LiveCampaigns />
+          <LiveCampaigns />
+          <LiveCampaigns />
+          <LiveCampaigns />
         </SimpleGrid>
       </Main>
     </Content>
