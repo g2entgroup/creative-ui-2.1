@@ -33,7 +33,6 @@ import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
 import Logo from "../Navbar/Logo"
 import Balance from '../Balance/Balance';
-import SignIn from '../Modal/SignIn';
 
 const Header = () => {
   const { activate, chainId } = useWeb3React<Web3Provider>();
@@ -44,7 +43,7 @@ const Header = () => {
     console.log(chainId);
   };
 
-  const [showPass, setShowPass] = useState(false);
+  //const [showPass, setShowPass] = useState(false);
 
   const { toggleColorMode: toggleMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
@@ -389,7 +388,7 @@ const Header = () => {
                 <Button colorScheme="brand" variant="ghost" size="sm">
                   Sign in
                 </Button>
-                <Button colorScheme="brand" variant="solid" size="sm" color={useColorModeValue("brand.400", "grey")}>
+                <Button colorScheme="brand" variant="solid" size="sm" color={useColorModeValue("brand.400", "gray")}>
                   Sign up
                 </Button>
               </HStack>
