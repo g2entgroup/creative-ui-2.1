@@ -42,7 +42,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             >
               <HStack spacing="3">
                 <Icon as={BellIcon} fontSize="2xl" h="10" />
-                <Text fontWeight="medium" marginEnd="2">
+                <Text fontWeight="medium" marginEnd="2" is="custom">
                   Confirm your email. Check your email. We&apos;ve send a message to <b>sample@gmail.com</b>
                 </Text>
               </HStack>
