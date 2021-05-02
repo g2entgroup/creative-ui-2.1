@@ -32,6 +32,8 @@ export default function CreativeCard() {
         url={property.videoUrl}
         playing={true}
         loop={true}
+        width='100%'
+        height='70%'
       />
 
       <Box p="6">
