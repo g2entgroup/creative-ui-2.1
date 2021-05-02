@@ -25,7 +25,7 @@ export default function Home() {
       <Main>
         <Heading as="h2" size="lg" color="white" my={4}>🏆 Top Creatives</Heading>
         <SimpleGrid columns={ 5 } spacing="2rem">
-        <Box height="80px">
+          <Box height="80px">
             <OrderedList>
             <ListItem color="whiteAlpha.700"></ListItem>
             <ListItem color="whiteAlpha.700"></ListItem>
