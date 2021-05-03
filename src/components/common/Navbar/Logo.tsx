@@ -6,7 +6,7 @@ export default class Logo extends Component {
     render() {
         return (
             <Image 
-                src="/Creative_logo.png"
+                src="/img/Creative_logo.png"
                 alt="Creative Logo"
                 width={50}
                 height={40} 
