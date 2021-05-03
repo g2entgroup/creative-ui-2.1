@@ -130,7 +130,7 @@ const BrandHero = () => {
       >
         <Image
           layout="fill"
-          src="/brands.jpg"
+          src="/img/brands.jpg"
           alt="brand image"
           loading="lazy"
         />

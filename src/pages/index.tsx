@@ -1,5 +1,5 @@
 // import Head from "next/head";
-import { Heading, SimpleGrid, Box, OrderedList, ListItem, HStack } from "@chakra-ui/react";
+import { Heading, SimpleGrid, Box, OrderedList, ListItem } from "@chakra-ui/react";
 // import { Container } from '../components/common/container';
 import CreativeCard from '../components/CreativeCard';
 import BrandHero from '../components/BrandHero';
