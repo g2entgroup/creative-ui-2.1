@@ -9,7 +9,7 @@ const StarIcon = ({ color }) => <Icon name="star" color={color} />
 
 export default function Discover() {
   const property = {
-    imageUrl: "/img/purple-emoji.gif",
+    imageUrl: "/purple-emoji.gif",
     imageAlt: "Purple Emoji Campaign",
     crtv: 40,
     apr: 18.78,

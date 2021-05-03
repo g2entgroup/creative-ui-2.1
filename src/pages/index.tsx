@@ -6,13 +6,15 @@ import BrandHero from '../components/BrandHero';
 import { Content } from "../components/common/Content/Content";
 import { Main } from "../components/common/Main/Main";
 import LiveCampaigns from "../components/LiveCampaigns";
+import TrendingCollections from "../components/TrendingCollections";
+import FilterTab from "../components/common/FilterTab/FilterTab";
 
 export default function Home() {
   return (
     <Content>
       <BrandHero />
       <Main>
-        <Heading as="h2" size="lg" color="white" my={4}>Latest Brand Campaigns</Heading>
+        <Heading as="h2" size="lg" color="white" my={4}>🆕 Latest Brand Campaigns</Heading>
         <SimpleGrid columns={[1, 4]} spacing="2rem">
           <CreativeCard />
           <CreativeCard />
@@ -21,7 +23,7 @@ export default function Home() {
         </SimpleGrid>
       </Main>
       <Main>
-        <Heading as="h2" size="lg" color="white" my={4}>Top Creatives</Heading>
+        <Heading as="h2" size="lg" color="white" my={4}>🏆 Top Creatives</Heading>
         <SimpleGrid columns={ 5 } spacing="2rem">
         <Box height="80px">
             <OrderedList>
@@ -61,13 +63,26 @@ export default function Home() {
         </SimpleGrid>
       </Main>
       <Main>
-        <Heading as="h2" size="lg" color="white" my={4}>Live Brand Campaigns</Heading>
+        <Heading as="h2" size="lg" color="white" my={4}>🎬 Live Brand Campaigns</Heading>
         <SimpleGrid columns={[1, 4]} spacing="2rem">
           <LiveCampaigns />
           <LiveCampaigns />
           <LiveCampaigns />
           <LiveCampaigns />
         </SimpleGrid>
+      </Main>
+      <Main>
+        <Heading as="h2" size="lg" color="white" my={4}>📈 Trending Collections</Heading>
+        <SimpleGrid columns={[1, 4]} spacing="2rem">
+          <TrendingCollections />
+          <TrendingCollections />
+          <TrendingCollections /> 
+          <TrendingCollections />
+        </SimpleGrid>
+      </Main>
+      <Main>
+        <Heading as="h2" size="lg" color="white" my={4}>🔭 Discover</Heading>
+        <FilterTab />
       </Main>
     </Content>
   );
