@@ -1,11 +1,12 @@
 // import Head from "next/head";
-import { Heading, SimpleGrid, Box, OrderedList, ListItem } from "@chakra-ui/react";
+import { Heading, SimpleGrid, Box, OrderedList, ListItem, HStack } from "@chakra-ui/react";
 // import { Container } from '../components/common/container';
 import CreativeCard from '../components/CreativeCard';
 import BrandHero from '../components/BrandHero';
 import { Content } from "../components/common/Content/Content";
 import { Main } from "../components/common/Main/Main";
 import LiveCampaigns from "../components/LiveCampaigns";
+import FilterTab from "../components/common/FilterTab/FilterTab";
 
 export default function Home() {
   return (
@@ -68,6 +69,10 @@ export default function Home() {
           <LiveCampaigns />
           <LiveCampaigns />
         </SimpleGrid>
+      </Main>
+      <Main>
+        <Heading as="h2" size="lg" color="white" my={4}>Discover</Heading>
+        <FilterTab />
       </Main>
     </Content>
   );
