@@ -1,95 +1,83 @@
 import React from "react";
+import { chakra, Box, Image, Flex, useColorModeValue } from "@chakra-ui/react";
 
-import { Box, Badge, useToken } from "@chakra-ui/react";
-import Icon from "@chakra-ui/icon";
-import ReactPlayer from 'react-player/lazy';
-
-const StarIcon = ({ color }) => <Icon name="star" color={color} />
-
-export default function TrendingCollections() {
-  const property = {
-    videoUrl: "https://youtu.be/vax0IOXIi44",
-    imageAlt: "Pepsi Campaign",
-    crtv: 40,
-    apr: 18.78,
-    title: "Pepsi - That's What I Like",
-    formattedPrice: "$20,100.00",
-    reviewCount: 2,
-    rating: 3
-  };
-
-  const [brand400, brand200] = useToken(
-    // the key within the theme, in this case `theme.colors`
-    "colors",
-    // the subkey(s), resolving to `theme.colors.red.100`
-    ["brand.400", "brand.200"],
-    // a single fallback or fallback array matching the length of the previous arg
-  )
-
+const TrendingCollections = () => {
   return (
-    <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" align="center" height="511px" width="full" boxShadow={`inset 0 4px 0 ${brand400}, 0 0 8px ${brand200}`}>
-      <ReactPlayer 
-        url={property.videoUrl}
-        playing={true}
-        loop={true}
-        width='100%'
-        height='70%'
-      />
-
-      <Box p="6">
-        <Box d="flex" alignItems="baseline">
-          <Badge rounded="full" px="2" colorScheme={brand400}>
-            New
-          </Badge>
-          <Box
-            color="gray.500"
-            fontWeight="semibold"
-            letterSpacing="wide"
-            fontSize="xs"
+    <Flex
+      bg={useColorModeValue("#F9FAFB", "gray.600")}
+      p={50}
+      w="full"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Box
+        maxW="xs"
+        mx="auto"
+        bg={useColorModeValue("white", "gray.800")}
+        shadow="lg"
+        rounded="lg"
+      >
+        <Box px={4} py={2}>
+          <chakra.h1
+            color={useColorModeValue("gray.800", "white")}
+            fontWeight="bold"
+            fontSize="3xl"
             textTransform="uppercase"
-            ml="2"
           >
-            {property.crtv} CRTV &bull; {property.apr} % APR
-          </Box>
+            NIKE AIR
+          </chakra.h1>
+          <chakra.p
+            mt={1}
+            fontSize="sm"
+            color={useColorModeValue("gray.600", "gray.400")}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos
+            quidem sequi illum facere recusandae voluptatibus
+          </chakra.p>
         </Box>
 
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h2"
-          lineHeight="tight"
-          isTruncated
-          color="white"
+        <Image
+          h={48}
+          w="full"
+          fit="cover"
+          mt={2}
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80"
+          alt="NIKE AIR"
+        />
+
+        <Flex
+          alignItems="center"
+          justifyContent="space-between"
+          px={4}
+          py={2}
+          bg="gray.900"
+          roundedBottom="lg"
         >
-          {property.title}
-        </Box>
-
-        <Box color="white">
-          {property.formattedPrice}
-          <Box as="span" 
-            bgGradient="linear(to-l, #7928CA, #e50168)"
-            bgClip="text"
-            fontSize="lg"
-            fontWeight="extrabold" 
+          <chakra.h1 color="white" fontWeight="bold" fontSize="lg">
+            $129
+          </chakra.h1>
+          <chakra.button
+            px={2}
+            py={1}
+            bg="white"
+            fontSize="xs"
+            color="gray.900"
+            fontWeight="bold"
+            rounded="lg"
+            textTransform="uppercase"
+            _hover={{
+              bg: "gray.200",
+            }}
+            _focus={{
+              bg: "gray.400",
+            }}
           >
-            &nbsp;/ Weekly Prize
-          </Box>
-        </Box>
-
-        <Box d="flex" mt="2" alignItems="center">
-          {Array(5)
-            .fill("")
-            .map((_, i) => (
-              <StarIcon
-                key={i}
-                color={i < property.rating ? "pink.500" : "gray.300"}
-              />
-            ))}
-          <Box as="span" ml="2" color="gray.600" fontSize="sm">
-            {property.reviewCount} reviews
-          </Box>
-        </Box>
+            Add to cart
+          </chakra.button>
+        </Flex>
       </Box>
-    </Box>
+    </Flex>
   );
-}
+};
+
+export default TrendingCollections;
