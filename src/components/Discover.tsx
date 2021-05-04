@@ -3,13 +3,16 @@ import React from "react";
 import { Box, Badge, useToken } from "@chakra-ui/react";
 import Icon from "@chakra-ui/icon";
 import Image from 'next/image';
-//import ReactPlayer from 'react-player/lazy';
+
+const discoverLoader = ({ src, width, quality }) => {
+  return `https://www.creativeplatform.io/${src}?w=${width}&q=${quality || 75}`
+}
 
 const StarIcon = ({ color }) => <Icon name="star" color={color} />
 
 export default function Discover() {
   const property = {
-    imageUrl: "/img/purple-emoji.gif",
+    imageUrl: "img/purple-emoji.gif",
     imageAlt: "Purple Emoji Campaign",
     crtv: 40,
     apr: 18.78,
@@ -30,11 +33,13 @@ export default function Discover() {
   return (
     <Box maxW="sm" borderWidth="1px" rounded="lg" overflow="hidden" align="center" height="511px" width="full" boxShadow={`inset 0 4px 0 ${brand400}, 0 0 8px ${brand200}`}>
         <Image 
+          loader={discoverLoader}
+          loading="lazy"
           src={property.imageUrl}
           alt={property.imageAlt}
           layout="responsive"
           width={"100%"}
-          height={"70%"}
+          height={"90%"}
         />
 
       <Box p="6">
