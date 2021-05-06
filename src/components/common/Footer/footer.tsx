@@ -20,7 +20,7 @@ const Footer = () => {
       {/* logo  */}
       <Box textAlign="center" mb="3rem">
         <Image
-          src="/Creative_logo.png"
+          src="https://www.creativeplatform.io/img/Creative_logo.png"
           alt="Creative logo"
           width={90}
           height={80}
