@@ -25,7 +25,7 @@ const Footer = () => {
           width={90}
           height={80}
         />
-        <Heading fontSize="2rem">Creative</Heading>
+        <Heading fontSize="2rem">CREATIVE</Heading>
       </Box>
       {/* 4 sliders  */}
       <Grid
