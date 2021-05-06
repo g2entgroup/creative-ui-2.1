@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
 //import { Stack, Box, Grid, Heading, Spacer, Link, Container } from "@chakra-ui/react";
 import { useWeb3React } from "@web3-react/core";
-import { Web3Provider } from '@ethersproject/providers'
+import { Web3Provider } from "@ethersproject/providers";
 import { injectedConnector } from "../../../utils/injectedConnector";
 // import Image from "next/image";
 import {
@@ -31,11 +31,13 @@ import { IoIosArrowDown } from "react-icons/io";
 import { AiFillHome, AiOutlineInbox, AiOutlineMenu } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { FaMoon, FaSun } from "react-icons/fa";
-import Logo from "../Navbar/Logo"
-import Balance from '../Balance/Balance';
+import Logo from "../Navbar/Logo";
+import Balance from "../Balance/Balance";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
 
 const Header = () => {
-  const { activate, chainId } = useWeb3React<Web3Provider>();
+  const { activate, chainId, active } = useWeb3React<Web3Provider>();
 
   // click to conncet wallet
   const onClick = () => {
@@ -51,7 +53,9 @@ const Header = () => {
   const bg = useColorModeValue("white", "gray.800");
   const ref = useRef(null);
   const [y, setY] = useState(0);
-  const { height } = ref.current ? ref.current.getBoundingClientRect() : { height: 0 };
+  const { height } = ref.current
+    ? ref.current.getBoundingClientRect()
+    : { height: 0 };
 
   const { scrollY } = useViewportScroll();
   React.useEffect(() => {
@@ -73,7 +77,6 @@ const Header = () => {
         alignItems="start"
         rounded="lg"
         _hover={{ bg: hbg }}
-        
       >
         <chakra.svg
           flexShrink={0}
@@ -187,7 +190,7 @@ const Header = () => {
         <Box px={{ base: 5, sm: 8 }} py={5} bg={hbg} display={{ sm: "flex" }}>
           <Stack direction={{ base: "row" }} spacing={{ base: 6, sm: 10 }}>
             <Box display="flow-root">
-              <Link           
+              <Link
                 m={-3}
                 p={3}
                 display="flex"
@@ -227,7 +230,6 @@ const Header = () => {
 
             <Box display="flow-root">
               <Link
-                
                 m={-3}
                 p={3}
                 display="flex"
@@ -284,24 +286,18 @@ const Header = () => {
         justifySelf="self-start"
         onClick={mobileNav.onClose}
       />
-      <Button w="full" variant="ghost"  leftIcon={<AiFillHome />}>
+      <Button w="full" variant="ghost" leftIcon={<AiFillHome />}>
         Dashboard
       </Button>
       <Button
         w="full"
         variant="solid"
         colorScheme="brand"
-        
         leftIcon={<AiOutlineInbox />}
       >
         Inbox
       </Button>
-      <Button
-        w="full"
-        variant="ghost"
-        
-        leftIcon={<BsFillCameraVideoFill />}
-      >
+      <Button w="full" variant="ghost" leftIcon={<BsFillCameraVideoFill />}>
         Videos
       </Button>
     </VStack>
@@ -330,7 +326,14 @@ const Header = () => {
               <Link href="/">
                 <HStack>
                   <Logo />
-                    <Heading color={useColorModeValue("gray.500", "white")} as="h1" size="lg"> Creative</Heading>
+                  <Heading
+                    color={useColorModeValue("gray.500", "white")}
+                    as="h1"
+                    size="lg"
+                  >
+                    {" "}
+                    Creative
+                  </Heading>
                 </HStack>
               </Link>
             </Flex>
@@ -374,23 +377,34 @@ const Header = () => {
             </Flex>
             <Flex justify="flex-end" align="center" color="gray.400">
               <HStack spacing="5" display={{ base: "none", md: "flex" }}>
-              <Balance/>
-              <Button
-                  colorScheme="brand"
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => {
-                    onClick();
-                  }}
-                >
-                  Wallet Connect
-                </Button>
-                <Button colorScheme="brand" variant="ghost" size="sm">
-                  Sign in
-                </Button>
-                <Button colorScheme="brand" variant="solid" size="sm" color={useColorModeValue("brand.400", "gray")}>
-                  Sign up
-                </Button>
+                <Balance />
+
+                {active === true ? (
+                  ""
+                ) : (
+                  <Button
+                    colorScheme="brand"
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => {
+                      onClick();
+                    }}
+                  >
+                    Wallet Connect
+                  </Button>
+                )}
+
+                {/* if wallet  connect let the user sign in or sign up (modal)  */}
+                {active === true ? (
+                  <>
+                    {/* sign in  */}
+                    <SignIn />
+                    {/* sign up  */}
+                    <SignUp />
+                  </>
+                ) : (
+                  ""
+                )}
               </HStack>
               <NotificationDrawer />
               <IconButton
@@ -419,5 +433,5 @@ const Header = () => {
       </chakra.header>
     </React.Fragment>
   );
-}
-export default Header
+};
+export default Header;
