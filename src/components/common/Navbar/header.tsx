@@ -23,6 +23,8 @@ import {
   SimpleGrid,
   Stack,
   Heading,
+  Divider,
+  Center
 } from "@chakra-ui/react";
 import NotificationDrawer from "../Notification/NotificationDrawer";
 import { useViewportScroll } from "framer-motion";
@@ -114,8 +116,14 @@ const Header = () => {
           py={6}
           p={{ sm: 8 }}
         >
+          <Link>
           <Section
-            title="Analytics"
+            title="How It Works"
+          >
+          </Section>
+          </Link>
+          <Section
+            title="CRTVO Token"
             icon={
               <path
                 strokeLinecap="round"
@@ -125,11 +133,12 @@ const Header = () => {
               />
             }
           >
-            Get a better understanding of where your traffic is coming from.
+            We think that the best way to align platform development with customers' interests is to empower the ones who actively interact with the protocol: creators, fans, and brands. 
           </Section>
-
+            
+          <Link href="https://www.creativeplatform.io/forum/" target="_blank">
           <Section
-            title="Engagement"
+            title="Discussion"
             icon={
               <path
                 strokeLinecap="round"
@@ -139,11 +148,12 @@ const Header = () => {
               />
             }
           >
-            Speak directly to your customers in a more meaningful way.
+            The place to discuss all things related to the Creative platform.
           </Section>
-
+          </Link>
+            <Link href="https://community.xyz/#YN7VDKn_JjziC4tTL92K9pO_iMcnMSjk6kgSBr1EPjI/votes">
           <Section
-            title="Security"
+            title="DAO Proposals"
             icon={
               <path
                 strokeLinecap="round"
@@ -153,11 +163,12 @@ const Header = () => {
               />
             }
           >
-            Your customers&#039; data will be safe and secure.
           </Section>
+          </Link>
 
+          <Link href="https://creative.nolt.io/"> 
           <Section
-            title="Integrations"
+            title="Feature Suggestions"
             description={
               <path
                 strokeLinecap="round"
@@ -167,22 +178,9 @@ const Header = () => {
               />
             }
           >
-            Connect with third-party tools that you&#039;re already using.
+            Suggest a feature to the Creative community for the good of the platform.
           </Section>
-
-          <Section
-            title="Automations"
-            icon={
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-              />
-            }
-          >
-            Build strategic funnels that will drive your customers to convert
-          </Section>
+          </Link>  
         </SimpleGrid>
         <Box px={{ base: 5, sm: 8 }} py={5} bg={hbg} display={{ sm: "flex" }}>
           <Stack direction={{ base: "row" }} spacing={{ base: 6, sm: 10 }}>
@@ -330,12 +328,48 @@ const Header = () => {
               <Link href="/">
                 <HStack>
                   <Logo />
-                    <Heading color={useColorModeValue("gray.500", "white")} as="h1" size="lg"> Creative</Heading>
+                    <Heading color={useColorModeValue("gray.500", "white")} as="h1" size="lg"> CREATIVE</Heading>
                 </HStack>
               </Link>
             </Flex>
             <Flex>
               <HStack spacing="5" display={{ base: "none", md: "flex" }}>
+              <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: "none" }}
+                >
+                  Explore
+              </Button>
+              <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: "none" }}
+                >
+                  Activity
+                </Button>
+              <Button
+                  bg={bg}
+                  color="gray.500"
+                  display="inline-flex"
+                  alignItems="center"
+                  fontSize="md"
+                  _hover={{ color: cl }}
+                  _focus={{ boxShadow: "none" }}
+                >
+                  Vote
+                </Button>
+                  <Center height="50px">
+                    <Divider orientation="vertical" />
+                  </Center>
                 <Popover>
                   <PopoverTrigger>
                     <Button
@@ -348,7 +382,7 @@ const Header = () => {
                       _focus={{ boxShadow: "none" }}
                       rightIcon={<IoIosArrowDown />}
                     >
-                      Brand Campaigns
+                      Community
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent
@@ -359,17 +393,6 @@ const Header = () => {
                     <Features />
                   </PopoverContent>
                 </Popover>
-                <Button
-                  bg={bg}
-                  color="gray.500"
-                  display="inline-flex"
-                  alignItems="center"
-                  fontSize="md"
-                  _hover={{ color: cl }}
-                  _focus={{ boxShadow: "none" }}
-                >
-                  Vote
-                </Button>
               </HStack>
             </Flex>
             <Flex justify="flex-end" align="center" color="gray.400">
