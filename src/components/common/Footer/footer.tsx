@@ -7,9 +7,7 @@ import {
   Text,
   Input,
 } from "@chakra-ui/react";
-//import Header from "../Navbar/header";
 import { AiOutlineMail } from "react-icons/ai";
-//import { GoLocation } from "react-icons/go";
 import { FiTwitter, FiInstagram } from "react-icons/fi";
 import { SiDiscord } from "react-icons/si";
 import Image from "next/image";
@@ -25,7 +23,7 @@ const Footer = () => {
           width={90}
           height={80}
         />
-        <Heading fontSize="2rem">Creative</Heading>
+        <Heading fontSize="2rem">CREATIVE</Heading>
       </Box>
       {/* 4 sliders  */}
       <Grid

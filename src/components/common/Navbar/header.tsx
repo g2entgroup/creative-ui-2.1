@@ -1,9 +1,7 @@
 import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
-//import { Stack, Box, Grid, Heading, Spacer, Link, Container } from "@chakra-ui/react";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
 import { injectedConnector } from "../../../utils/injectedConnector";
-// import Image from "next/image";
 import {
   chakra,
   HStack,

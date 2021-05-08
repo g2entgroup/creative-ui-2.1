@@ -37,17 +37,14 @@ export default function LiveCampaigns() {
       />
 
       <Box p="6">
-        <Box d="flex" alignItems="baseline">
-          <Badge rounded="full" px="2" colorScheme="pink">
-            New
-          </Badge>
+        <Box d="flex" alignItems="center">
           <Box
             color="gray.500"
             fontWeight="semibold"
             letterSpacing="wide"
             fontSize="xs"
             textTransform="uppercase"
-            ml="2"
+            
           >
             {property.crtv} CRTV &bull; {property.apr} % APR
           </Box>
@@ -57,7 +54,7 @@ export default function LiveCampaigns() {
           mt="1"
           fontWeight="semibold"
           as="h2"
-          lineHeight="tight"
+          lineHeight="1.5"
           isTruncated
           color="white"
         >

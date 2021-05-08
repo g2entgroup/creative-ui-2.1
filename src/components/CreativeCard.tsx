@@ -38,7 +38,7 @@ export default function CreativeCard() {
 
       <Box p="6">
         <Box d="flex" alignItems="baseline">
-          <Badge rounded="full" px="2" colorScheme="pink">
+          <Badge rounded="full" px="2" color={brand400}>
             New
           </Badge>
           <Box

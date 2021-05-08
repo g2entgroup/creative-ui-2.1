@@ -44,9 +44,9 @@ export default function Discover() {
 
       <Box p="6">
         <Box d="flex" alignItems="baseline">
-          <Badge rounded="full" px="2" colorScheme={brand400}>
+          {/* <Badge rounded="full" px="2" color={brand400}>
             New
-          </Badge>
+          </Badge> */}
           <Box
             color="gray.500"
             fontWeight="semibold"
