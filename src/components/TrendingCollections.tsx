@@ -4,7 +4,7 @@ import { chakra, Box, Image, Flex, useColorModeValue } from "@chakra-ui/react";
 const TrendingCollections = () => {
   return (
     <Flex
-      bg={useColorModeValue("#F9FAFB", "gray.600")}
+      bg={useColorModeValue("gray.300", "gray.600")}
       p={50}
       w="full"
       alignItems="center"
