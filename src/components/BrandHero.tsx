@@ -57,7 +57,7 @@ const BrandHero = () => {
                 color={useColorModeValue("gray.900", "white")}
               >
                 <chakra.span display={{ base: "block", xl: "inline" }}>
-                We've Set the Stage{" "}
+                We've Set the Stage{" "}<br />
                 </chakra.span>
                 <chakra.span
                   display={{ base: "block", xl: "inline" }}
