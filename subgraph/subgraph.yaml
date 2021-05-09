@@ -1,6 +1,6 @@
 specVersion: 0.0.2
-description: Gravatar for Ethereum
-repository: https://github.com/graphprotocol/example-subgraph
+description: CREATIVE Subgraph V1
+repository: https://github.com/g2entgroup/creative-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
