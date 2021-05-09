@@ -6,7 +6,9 @@ export const Networks = {
   Ropsten: 3,
   Rinkeby: 4,
   Goerli: 5,
-  Kovan: 42
+  Kovan: 42,
+  Matic: 137,
+  Mumbai: 8001
 }
 
 
@@ -16,7 +18,9 @@ export const Networks = {
       Networks.Ropsten, // Ropsten
       Networks.Rinkeby, // Rinkeby
       Networks.Goerli, // Goerli
-      Networks.Kovan // Kovan
+      Networks.Kovan, // Kovan
+      Networks.Matic, // Matic
+      Networks.Mumbai, // Mumbai
     ]
   })
   
